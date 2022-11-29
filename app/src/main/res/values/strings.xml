@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">AFR ERP</string>
+    <string name="str_Version">7.2.8</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Welcome to Africell ERP system</string>
+    <string name="strEmpty"></string>
+    <string name="strActivity_Login">AFR DRC ERP - Login</string>
+    <string name="Strlogin">Login</string>
+    <string name="strPassword">Password</string>
+    <string name="title_activity_second">AFR DRC ERP</string>
+    <string name="title_activity_stats">SIM Registration Stats</string>
+    <string name="str_Capture1_lbl">Photo 1</string>
+    <string name="title_activity_sim__registration">Enregistrement SIM</string>
+    <string name="str_Personal_Info">Info Personel</string>
+    <string name="str_First_Name">Prenom</string>
+    <string name="str_Father_Name">Prenom du pere</string>
+    <string name="str_Last_Name">Nom</string>
+    <string name="str_Gender">Sex</string>
+    <string name="str_Birth_Date">Date de naissance</string>
+    <string name="str_Email">Email</string>
+    <string name="str_Email_hint">Email@mail.com</string>
+    <string name="str_Education">Education</string>
+    <string name="str_Nationality">Nationalite</string>
+    <string name="str_IdType">Type ID</string>
+    <string name="str_ReferenceNbr">Numero Reference</string>
+    <string name="str_Capture1">Prendre Photo Personelle</string>
+    <string name="str_Capture2">Prendre Carte ID</string>
+    <string name="str_Capture3">Prendre Carte ID 2</string>
+    <string name="str_Capture4">Prendre Photo de contrat</string>
+    <string name="str_ResidenceAddress">Adresse</string>
+    <string name="str_Town">Cite</string>
+    <string name="str_Street">Rue</string>
+    <string name="str_Occupation">Occupation</string>
+    <string name="str_OccupationCategory">Category</string>
+    <string name="str_OccupationSubCategory">Sub Category</string>
+    <string name="str_Employer">Employer</string>
+    <string name="str_SIMInfo">SIM Info</string>
+    <string name="str_NDC">Code Reseau</string>
+    <string name="str_MSISDN">MSISDN</string>
+    <string name="str_MSISDNHint">1234567</string>
+    <string name="str_ICC">CodeBar Scan</string>
+    <string name="str_ICCHint">12345678</string>
+    <string name="str_Upload">Uploader</string>
+    <string name="str_Query">Requete</string>
+    <string name="str_Birth_Date_fix">Birth Date</string>
+    <string name="str_get_photo">Prendre Photo</string>
+    <string name="str_check_availability">Check Availability</string>
+    <string name="str_create_msisdn">Create MSISDN</string>
+    <string name="str_TableAgent">Table Agent</string>
+    <string name="str_FromICC">From ICC</string>
+    <string name="str_TillICC">Till ICC</string>
+
+    <string name="RegistrationType">Registration Type</string>
+    <string name="RegistrationType1">National ID</string>
+    <string name="RegistrationType2">Fingerprint</string>
+
+    <!-- Fingerprint Device -->
+    <string name="fingerprint">Fingerprint Device</string>
+    <string name="take_finger">Prendre Empreinte</string>
+    <string name="fps_sn">Fingerprint device serial number is <xliff:g>%1$s</xliff:g>.</string>
+    <string name="fps_fw">Fingerprint device firmware version is <xliff:g>%1$s</xliff:g>.</string>
+    <string name="fp_collect_info">Single fingerprint collection information:</string>
+    <string name="capture">Capture image:</string>
+    <string name="extract">Extract feature:</string>
+    <string name="generalize">Make template:</string>
+    <string name="verify">Verify or identify:</string>
+    <string name="enroll_fp">Scan finger</string>
+    <string name="verify_fp">Verify</string>
+    <string name="identify_fp">Identify</string>
+    <string name="clear_fp_db">Clear database</string>
+    <string name="show_fp">Show image</string>
+    <string name="press_finger">Please press finger on fingerprint device.</string>
+    <string name="enrolling">Enrolling fingerprint to database…</string>
+    <string name="verifying">Verifying fingerprint…</string>
+    <string name="identifying">Identify fingerprint…</string>
+    <string name="fingerprint_device_open_success">Fingerprint device open success!</string>
+    <string name="fingerprint_device_open_failed">Fingerprint device open failed!</string>
+    <string name="fingerprint_device_close_success">Fingerprint device close success!</string>
+    <string name="fingerprint_device_close_failed">Fingerprint device close failed!</string>
+    <string name="fingerprint_device_power_on_failed">Fingerprint device power on failed!</string>
+    <string name="fingerprint_device_power_off_failed">Fingerprint device power off failed!</string>
+    <string name="algorithm_initialization_failed">Algorithm initialization failed!</string>
+    <string name="algorithm_cleanup_failed">Algorithm cleanup failed!</string>
+    <string name="not_done">Not done yet</string>
+    <string name="capture_image_success">Capture fingerprint image success!</string>
+    <string name="capture_image_failed">Capture fingerprint image failed!</string>
+    <string name="enroll_failed_because_of_extract_feature">Enroll failed because extract feature return error!</string>
+    <string name="enroll_failed_because_of_make_template">Enroll failed because make template return error!</string>
+    <string name="enroll_failed_because_of_get_id">Enroll failed because get free ID return error!</string>
+    <string name="enroll_failed_because_of_error">Enroll failed!</string>
+    <string name="enroll_success">Enroll success! The enrolled fingerprint ID is </string>
+    <string name="verify_failed_because_of_extract_feature">Verify failed because extract feature return error!</string>
+    <string name="verify_failed_because_of_error">Verify failed!</string>
+    <string name="fingerprint_not_match">Fingerprint does not match!</string>
+    <string name="fingerprint_match">Fingerprint match!</string>
+    <string name="identify_failed_because_of_extract_feature">Identify failed because extract feature return error!</string>
+    <string name="identify_failed_because_of_error">Identify failed!</string>
+    <string name="identify_match">Identify success! The matched fingerprint ID is </string>
+    <string name="clear_fingerprint_database_success">Clear fingerprint database success!</string>
+    <string name="clear_fingerprint_database_failed">Clear fingerprint database failed!</string>
+
+    <!-- China Second-Generation Identity Card Reader -->
+    <string name="idcard">China Second-Generation Identity Card Reader</string>
+    <string name="idcard_sn">IDCard device serial number is <xliff:g>%1$s</xliff:g>.</string>
+    <string name="name">Name:</string>
+    <string name="sex">Sex:</string>
+    <string name="nationality">Nationality:</string>
+    <string name="birthday">Birthday:</string>
+    <string name="address">Address</string>
+    <string name="number">ID card number:</string>
+    <string name="authority">Authority:</string>
+    <string name="valid_date">Valid date:</string>
+    <string name="fp_info">Fingerprint:</string>
+    <string name="read_idcard">Read ID card</string>
+    <string name="read_idcard_id">Read ID card ID</string>
+    <string name="place_idcard">Please place ID card near the antenna.</string>
+    <string name="id_card_reader_open_success">ID card reader open success!</string>
+    <string name="id_card_reader_open_failed">ID card reader open failed!</string>
+    <string name="id_card_reader_close_success">ID card reader close success!</string>
+    <string name="id_card_reader_close_failed">ID card reader close failed!</string>
+    <string name="id_card_reader_power_on_failed">ID card reader power on failed!</string>
+    <string name="id_card_reader_power_off_failed">ID card reader power off failed!</string>
+    <string name="id_card_read_success">Read ID card success!</string>
+    <string name="id_card_not_exist_or_reread">Please remove ID card and then put it back to card reading area!</string>
+    <string name="id_card_read_failed">Read ID card failed!</string>
+    <string name="id_card_read_id_success">Read ID card ID success! ID is </string>
+    <string name="id_card_read_id_failed">Read ID card ID failed!</string>
+    <string name="long_term">Long-term</string>
+    <string name="exist">Exist</string>
+    <string name="not_exist">Not exist</string>
+
+    <!-- IC Card Reader -->
+    <string name="iccard">IC Card Reader</string>
+    <string name="read_iccard">Read IC card</string>
+    <string name="write_iccard">Write IC card</string>
+    <string name="place_iccard">Please place card near the antenna.</string>
+    <string name="ic_card_reader_open_success">IC card reader open success!</string>
+    <string name="ic_card_reader_open_failed">IC card reader open failed!</string>
+    <string name="ic_card_reader_close_success">IC card reader close success!</string>
+    <string name="ic_card_reader_close_failed">IC card reader close failed!</string>
+    <string name="ic_card_reader_power_on_failed">IC card reader power on failed!</string>
+    <string name="ic_card_reader_power_off_failed">IC card reader power off failed!</string>
+    <string name="ic_card_validate_key_failed">Validate key failed!</string>
+    <string name="ic_card_read_success">Read IC card success!</string>
+    <string name="ic_card_read_failed">Read IC card failed!</string>
+    <string name="ic_card_write_success">Write IC card success!</string>
+    <string name="ic_card_write_failed">Write IC card failed!</string>
+
+    <!-- Barcode Scanner -->
+    <string name="hardware_barcode">Hardware Barcode Scanner</string>
+    <string name="software_barcode">Software Barcode Scanner</string>
+    <string name="firmware_version">Firmware version:</string>
+    <string name="serial_number">Serial number:</string>
+    <string name="data_output">Data output:</string>
+    <string name="scan_barcode">Scan barcode</string>
+    <string name="multi_scan">Scan multiple barcode</string>
+    <string name="barcode_format">Barcode format:</string>
+    <string name="barcode_size">Barcode size (bytes):</string>
+    <string name="align_barcode">Please align the scan window to the barcode.</string>
+    <string name="hardware_barcode_scanner_open_success">Hardware barcode scanner open success!</string>
+    <string name="hardware_barcode_scanner_open_failed">Hardware barcode scanner open failed!</string>
+    <string name="hardware_barcode_scanner_close_success">Hardware barcode scanner close success!</string>
+    <string name="hardware_barcode_scanner_close_failed">Hardware barcode scanner close failed!</string>
+    <string name="hardware_barcode_scanner_power_on_failed">Hardware barcode scanner power on failed!</string>
+    <string name="hardware_barcode_scanner_power_off_failed">Hardware barcode scanner power off failed!</string>
+    <string name="barcode_scan_success">Barcode scan success!</string>
+    <string name="barcode_scan_failed">Barcode scan failed!</string>
+    <string name="unsupported_encoding">The data from barcode could not change to UTF-8 encoding!</string>
+    <string name="barcode_scanned"><xliff:g>%1$d</xliff:g> barcode has been scanned.</string>
+    <string name="barcode_scanned_none">None barcode has been scanned.</string>
+
+    <!-- Printer -->
+    <string name="printer">Printer</string>
+    <string name="print_test_page">Print test page</string>
+    <string name="printing">Printing…</string>
+    <string name="print_success">Print success!</string>
+    <string name="print_failed">Print failed!</string>
+    <string name="printer_open_success">Printer open success!</string>
+    <string name="printer_open_failed">Printer open failed!</string>
+    <string name="printer_close_success">Printer close success!</string>
+    <string name="printer_close_failed">Printer close failed!</string>
+    <string name="printer_power_on_failed">Printer power on failed!</string>
+    <string name="printer_power_off_failed">Printer power off failed!</string>
+
+    <!-- Error Code Strings -->
+    <string name="info_error">Error</string>
+    <string name="operation_successful">Operation is successful!</string>
+    <string name="error_operation_failed">Operation failed!</string>
+    <string name="error_wrong_connection">Operation failed because of wrong connection!</string>
+    <string name="error_device_busy">Operation failed because of device busy!</string>
+    <string name="error_device_not_open">Operation failed because of device not open!</string>
+    <string name="error_timeout">Operation failed because of timeout!</string>
+    <string name="error_no_permission">Operation failed because of no permission!</string>
+    <string name="error_wrong_parameter">Operation failed because of wrong parameter!</string>
+    <string name="error_decode">Operation failed because of decode failed!</string>
+    <string name="error_initialization_failed">Operation failed because of initialization failed!</string>
+    <string name="error_unknown">Operation failed because of unknown error!</string>
+    <string name="error_not_support">Operation failed because of not support!</string>
+    <string name="error_not_enough_memory">Operation failed because of not enough memory!</string>
+    <string name="error_device_not_found">Operation failed because of device not found!</string>
+    <string name="error_device_reopen">Operation failed because of device reopen!</string>
+    <string name="error_algorithm_initialization_failed">Operation failed because of fingerprint algorithm initialization failed!</string>
+    <string name="error_invalid_feature_data">Operation failed because of invalid fingerprint feature data!</string>
+    <string name="error_bad_image">Operation failed because of bad fingerprint image!</string>
+    <string name="error_not_match">Operation failed because of fingerprint not match!</string>
+    <string name="error_low_point">Operation failed because of fingerprint verify score is too low!</string>
+    <string name="error_no_finger">Operation failed because of no finger!</string>
+    <string name="error_no_result">Operation failed because of no match fingerprint are found in database!</string>
+    <string name="error_out_of_bound">Operation failed because of id is out of range!</string>
+    <string name="error_database_full">Operation failed because of database is full!</string>
+    <string name="error_library_missing">Operation failed because of fingerprint algorithm library is missing!</string>
+    <string name="error_algorithm_uninitialize">Operation failed because of fingerprint algorithm not initialized!</string>
+    <string name="error_algorithm_reinitialize">Operation failed because of fingerprint algorithm reinitialize!</string>
+    <string name="error_repeated_enroll">Operation failed because of fingerprint repeated enroll!</string>
+    <string name="error_not_enrolled">Operation failed because of fingerprint not enrolled!</string>
+    <string name="error_no_card">Operation failed because of no card!</string>
+    <string name="error_invalid_card">Operation failed because of card invalid!</string>
+    <string name="error_invalid_decode_lib">Operation failed because of decode library invalid!</string>
+    <string name="error_card_validate_failed">Operation failed because of authentication card key failed!</string>
+    <string name="error_card_not_activate">Operation failed because of card is not activated!</string>
+    <string name="error_no_paper">Paper has been exhausted!</string>
+    <string name="error_other">Operation failed because of other error!</string>
+    <string name="afri_scan">Finger Print scan</string>
+
+    <string name="descript">Senior BSU Diasivi</string>
+
+    <string name="loading">Loading</string>
+    <string name="preparing_device">Device is preparing, please wait…</string>
+    <string name="closing_device">Device is closing, please wait…</string>
+
+
+    <string-array name="Gender_array">
+        <item></item>
+        <item>Feminin</item>
+        <item>Masculin</item>
+    </string-array>
+    <string-array name="Education_array">
+        <item></item>
+        <item>Illetre</item>
+        <item>Letre</item>
+        <item>Elementaire</item>
+        <item>Preparatoire</item>
+        <item>Secondaire</item>
+        <item>College</item>
+    </string-array>
+    <string-array name="Nationality_array">
+        <item>Afghan</item>
+        <item>Albanian</item>
+        <item>Algerian</item>
+        <item>American</item>
+        <item>Andorran</item>
+        <item>Angolan</item>
+        <item>Antiguans</item>
+        <item>Argentinean</item>
+        <item>Armenian</item>
+        <item>Australian</item>
+        <item>Austrian</item>
+        <item>Azerbaijani</item>
+        <item>Bahamian</item>
+        <item>Bahraini</item>
+        <item>Bangladeshi</item>
+        <item>Barbadian</item>
+        <item>Barbudans</item>
+        <item>Batswana</item>
+        <item>Belarusian</item>
+        <item>Belgian</item>
+        <item>Belizean</item>
+        <item>Beninese</item>
+        <item>Bhutanese</item>
+        <item>Bolivian</item>
+        <item>Bosnian</item>
+        <item>Brazilian</item>
+        <item>British</item>
+        <item>Bruneian</item>
+        <item>Bulgarian</item>
+        <item>Burkinabe</item>
+        <item>Burmese</item>
+        <item>Burundian</item>
+        <item>Cambodian</item>
+        <item>Cameroonian</item>
+        <item>Canadian</item>
+        <item>Cape Verdean</item>
+        <item>Central African</item>
+        <item>Chadian</item>
+        <item>Chilean</item>
+        <item>Chinese</item>
+        <item>Colombian</item>
+        <item>Comoran</item>
+        <item>Congolese</item>
+        <item>Costa Rican</item>
+        <item>Croatian</item>
+        <item>Cuban</item>
+        <item>Cypriot</item>
+        <item>Czech</item>
+        <item>Danish</item>
+        <item>Djibouti</item>
+        <item>Dominican</item>
+        <item>Dutch</item>
+        <item>East Timorese</item>
+        <item>Ecuadorean</item>
+        <item>Egyptian</item>
+        <item>Emirian</item>
+        <item>Equatorial Guinean</item>
+        <item>Eritrean</item>
+        <item>Estonian</item>
+        <item>Ethiopian</item>
+        <item>Fijian</item>
+        <item>Filipino</item>
+        <item>Finnish</item>
+        <item>French</item>
+        <item>Gabonese</item>
+        <item>Gambian</item>
+        <item>Georgian</item>
+        <item>German</item>
+        <item>Ghanaian</item>
+        <item>Greek</item>
+        <item>Grenadian</item>
+        <item>Guatemalan</item>
+        <item>Guinea-Bissauan</item>
+        <item>Guinean</item>
+        <item>Guyanese</item>
+        <item>Haitian</item>
+        <item>Herzegovinian</item>
+        <item>Honduran</item>
+        <item>Hungarian</item>
+        <item>I-Kiribati</item>
+        <item>Icelander</item>
+        <item>Indian</item>
+        <item>Indonesian</item>
+        <item>Iranian</item>
+        <item>Iraqi</item>
+        <item>Irish</item>
+        <item>Israeli</item>
+        <item>Italian</item>
+        <item>Ivorian</item>
+        <item>Jamaican</item>
+        <item>Japanese</item>
+        <item>Jordanian</item>
+        <item>Kazakhstani</item>
+        <item>Kenyan</item>
+        <item>Kittian and Nevisian</item>
+        <item>Kuwaiti</item>
+        <item>Kyrgyz</item>
+        <item>Laotian</item>
+        <item>Latvian</item>
+        <item>Lebanese</item>
+        <item>Liberian</item>
+        <item>Libyan</item>
+        <item>Liechtensteiner</item>
+        <item>Lithuanian</item>
+        <item>Luxembourger</item>
+        <item>Macedonian</item>
+        <item>Malagasy</item>
+        <item>Malawian</item>
+        <item>Malaysian</item>
+        <item>Maldivan</item>
+        <item>Malian</item>
+        <item>Maltese</item>
+        <item>Marshallese</item>
+        <item>Mauritanian</item>
+        <item>Mauritian</item>
+        <item>Mexican</item>
+        <item>Micronesian</item>
+        <item>Moldovan</item>
+        <item>Monacan</item>
+        <item>Mongolian</item>
+        <item>Moroccan</item>
+        <item>Mosotho</item>
+        <item>Motswana</item>
+        <item>Mozambican</item>
+        <item>Namibian</item>
+        <item>Nauruan</item>
+        <item>Nepalese</item>
+        <item>New Zealander</item>
+        <item>Nicaraguan</item>
+        <item>Nigerian</item>
+        <item>Nigerien</item>
+        <item>North Korean</item>
+        <item>Northern Irish</item>
+        <item>Norwegian</item>
+        <item>Omani</item>
+        <item>Pakistani</item>
+        <item>Palauan</item>
+        <item>Panamanian</item>
+        <item>Papua New Guinean</item>
+        <item>Paraguayan</item>
+        <item>Peruvian</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Qatari</item>
+        <item>Romanian</item>
+        <item>Russian</item>
+        <item>Rwandan</item>
+        <item>Saint Lucian</item>
+        <item>Salvadoran</item>
+        <item>Samoan</item>
+        <item>San Marinese</item>
+        <item>Sao Tomean</item>
+        <item>Saudi</item>
+        <item>Scottish</item>
+        <item>Senegalese</item>
+        <item>Serbian</item>
+        <item>Seychellois</item>
+        <item>Sierra Leonean</item>
+        <item>Singaporean</item>
+        <item>Slovakian</item>
+        <item>Slovenian</item>
+        <item>Solomon Islander</item>
+        <item>Somali</item>
+        <item>South African</item>
+        <item>South Korean</item>
+        <item>Spanish</item>
+        <item>Sri Lankan</item>
+        <item>Sudanese</item>
+        <item>Surinamer</item>
+        <item>Swazi</item>
+        <item>Swedish</item>
+        <item>Swiss</item>
+        <item>Syrian</item>
+        <item>Taiwanese</item>
+        <item>Tajik</item>
+        <item>Tanzanian</item>
+        <item>Thai</item>
+        <item>Togolese</item>
+        <item>Tongan</item>
+        <item>Trinidadian or Tobagonian</item>
+        <item>Tunisian</item>
+        <item>Turkish</item>
+        <item>Tuvaluan</item>
+        <item>Ugandan</item>
+        <item>Ukrainian</item>
+        <item>Uruguayan</item>
+        <item>Uzbekistani</item>
+        <item>Venezuelan</item>
+        <item>Vietnamese</item>
+        <item>Welsh</item>
+        <item>Yemenite</item>
+        <item>Zambian</item>
+        <item>Zimbabwean</item>
+    </string-array>
+    <string-array name="IdType_array">
+        <item></item>
+        <item>Carte D Identite</item>
+        <item>Carte Electeur</item>
+        <item>Permit de conduire</item>
+        <item>TAX Locale</item>
+        <item>Carte Officier</item>
+        <item>Passport</item>
+        <item>Carte Etudiant</item>
+    </string-array>
+    <string-array name="Town_array_kinshasa">
+        <item></item>
+        <item>Bandalungwa</item>
+        <item>Barumbu</item>
+        <item>Bumbu</item>
+        <item>Gombe</item>
+        <item>kalamu</item>
+        <item>Kasavubu</item>
+        <item>Kimbanseke</item>
+        <item>Kinsenso</item>
+        <item>Kinshasa</item>
+        <item>Kintambo</item>
+        <item>Lemba</item>
+        <item>Limete</item>
+        <item>Lingwala</item>
+        <item>Makala</item>
+        <item>Maluku</item>
+        <item>Masina</item>
+        <item>Matete</item>
+        <item>Mont Ngafula</item>
+        <item>Ndjili</item>
+        <item>Ngaba</item>
+        <item>Ngaliema</item>
+        <item>Ngiri Ngiri  </item>
+        <item>Nsele</item>
+        <item>Selembao</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="Town_array_Katanga">
+        <item></item>
+        <item>Ruashi</item>
+        <item>Kampemba</item>
+        <item>Kamalondo</item>
+        <item>Kenya</item>
+        <item>Katuba</item>
+        <item>Lubumbashi</item>
+        <item>Annexe</item>
+        <item>Kolwezi</item>
+        <item>Likazi</item>
+        <item>Kasumbalesa</item>
+        <item>Kipushi</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="Town_array_congo">
+        <item></item>
+        <item>Road</item>
+        <item>Matadi</item>
+        <item>Boma</item>
+        <item>Moanda</item>
+
+        <item>Bandundu-ville</item>
+        <item>Kenge</item>
+        <item>Kikwit</item>
+        <item>Masimanimba</item>
+        <item>idiofa</item>
+
+        <item>Other</item>
+    </string-array>
+    <string-array name="Town_array_kikwit">
+        <item></item>
+        <item>Bandundu-ville</item>
+        <item>Kenge</item>
+        <item>Kikwit</item>
+        <item>Masimanimba</item>
+        <item>idiofa</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="Town_array_town">
+        <item></item>
+        <item>Kinshasa</item>
+        <item>Bascongo</item>
+        <item>Bandundu</item>
+        <item>Katanga</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="occupationCategory_array">
+        <item></item>
+        <item>NGO Sector</item>
+        <item>Private Sector</item>
+        <item>Public Sector</item>
+        <item>Self-employed\Co. Owner, Privet Business</item>
+        <item>Self-employed\Owner of Handwork, Handicraft</item>
+        <item>Out of Work</item>
+    </string-array>
+    <string-array name="subOccupationCategory_array">
+        <item></item>
+        <item>Accountant</item>
+        <item>Actor</item>
+        <item>Architect</item>
+        <item>Banker</item>
+        <item>Bartender</item>
+        <item>Bike Rider</item>
+        <item>Blacksmith</item>
+        <item>Car Washer</item>
+        <item>Carpenter</item>
+        <item>Cashier</item>
+        <item>Civil servant</item>
+        <item>Cleaner</item>
+        <item>Clergy</item>
+        <item>Clerk</item>
+        <item>Coach</item>
+        <item>Comedian</item>
+        <item>Consultant</item>
+        <item>Cook</item>
+        <item>Diamond Dealer</item>
+        <item>Director</item>
+        <item>Disabled</item>
+        <item>Doctor</item>
+        <item>doorkeeper</item>
+        <item>Driller</item>
+        <item>Driver</item>
+        <item>Electrician</item>
+        <item>Engineer</item>
+        <item>Farmer</item>
+        <item>Fisher Man</item>
+        <item>Florist</item>
+        <item>Footballer</item>
+        <item>Forest Ranger</item>
+        <item>Gardener</item>
+        <item>Geologist</item>
+        <item>Hair Dresser</item>
+        <item>Herbalist</item>
+        <item>House Keeper</item>
+        <item>Human Resource Officer</item>
+        <item>Imam</item>
+        <item>Insurer</item>
+        <item>Journalist</item>
+        <item>Laboratory Technician</item>
+        <item>Load Carrier / Loader</item>
+        <item>Magistrate</item>
+        <item>Marine Engineer</item>
+        <item>Mason</item>
+        <item>Matress maker</item>
+        <item>Mechanic</item>
+        <item>Midwife</item>
+        <item>Miner</item>
+        <item>Missionary</item>
+        <item>Nurse</item>
+        <item>Officer (P/M/F)</item>
+        <item>Pastor</item>
+        <item>Pharmacist</item>
+        <item>Photographer</item>
+        <item>Plumber</item>
+        <item>Porter</item>
+        <item>Printing Officer</item>
+        <item>Prison  Officer</item>
+        <item>Quality controller</item>
+        <item>Receptionist</item>
+        <item>Referee</item>
+        <item>Retailer</item>
+        <item>Revenue  Collector</item>
+        <item>Sailors</item>
+        <item>Salesman</item>
+        <item>Sculptor</item>
+        <item>Secretary</item>
+        <item>Security</item>
+        <item>Shoe Marker</item>
+        <item>Statistician</item>
+        <item>Stevedore </item>
+        <item>Store Keeper</item>
+        <item>Surgeon</item>
+        <item>Surgical Assistant</item>
+        <item>Surveyor</item>
+        <item>Tailor</item>
+        <item>Teacher</item>
+        <item>Technician</item>
+        <item>Tele-marketer</item>
+        <item>Telephone Operator</item>
+        <item>Therapist</item>
+        <item>Trader</item>
+        <item>Travel  Agent</item>
+        <item>Watchman</item>
+        <item>Welder</item>
+        <item>Writer</item>
+    </string-array>
+    <string-array name="NDC_array">
+        <item>090</item>
+        <item>091</item>
+    </string-array>
+    <string name="str_Save">Save</string>
+    <string name="title_activity_new_registration">Enregistrement Nouvelle SIM</string>
+    <string name="str_Synchronize">Synchronize</string>
+    <string name="title_activity_registrationquery">Requete Enregistrement SIM</string>
+    <string name="title_activity_query_registration">Requete Enregistrement SIM</string>
+    <string name="title_activity_registration_query">Requete Enregistrement SIM</string>
+    <string name="title_activity_sim_creation">Sim Creation</string>
+    <string name="title_activity_offlinesimregistrationactivity">Offline Enregistrement SIM</string>
+    <string name="title_activity_synchronizeregistrationactivity">Synchronize Enregistrement</string>
+    <string name="title_activity_tables_supply">Tables Supply</string>
+    <string name="title_activity_newregistrationtableactivity">Enregistrement Nouvelle SIM</string>
+    <string name="title_activity_createtableuseractivity">New Table Agent</string>
+
+</resources>
+

@@ -1,0 +1,805 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:layout_width="match_parent" 
+  android:layout_height="match_parent"
+  >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="1800dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+     
+	<View
+	     android:id="@+id/LineSIMInfo0"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 /> 
+	
+	<View
+	     android:id="@+id/LineSIMInfo01"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LineSIMInfo0"
+		 /> 
+		 		 
+    <TextView
+        android:id="@+id/lblSIMInfoInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_SIMInfo"
+        android:textSize="18sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/LineSIMInfo01"
+        android:gravity="center_horizontal"
+        android:background="#FF9933"        
+         />
+	<View
+	     android:id="@+id/LineSIMInfo"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/lblSIMInfoInfo"
+		 />    
+	<View
+	     android:id="@+id/LineSIMInfo1"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LineSIMInfo"
+		 />     
+		 
+    <Button
+        android:id="@+id/btnScanBarCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/str_ICC"
+        android:onClick="onScanBarcodeClick"
+        android:layout_below="@+id/LineSIMInfo1"
+        android:background="@drawable/rounded_button" 
+        />      
+    
+    <EditText
+        android:id="@+id/txtICC"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="20"  
+        android:inputType="number"
+        android:layout_below="@+id/btnScanBarCode"
+        android:padding="5dip"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_edittext"        
+        />  	
+    
+	<TextView
+        android:id="@+id/lblNDC"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_NDC"
+		android:textSize="16sp" 
+        android:layout_below="@+id/txtICC"/>     
+        
+    <Spinner
+        android:id="@+id/spinnerNDC"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/lblNDC"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        />    
+    
+	<TextView
+        android:id="@+id/lblMSISDN"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_MSISDN"
+		android:textSize="16sp" 
+        android:layout_below="@+id/spinnerNDC"/>    
+    
+    <EditText
+        android:id="@+id/txtMSISDN"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLength="7"  
+        android:inputType="number"
+        android:layout_below="@+id/lblMSISDN"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        /> 	
+            
+    
+    <TextView
+        android:id="@+id/lblEmptySeparator4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strEmpty"
+        android:textSize="18sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtMSISDN"
+         />	    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+	<View
+	     android:id="@+id/LinePersonalInfo0"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/lblEmptySeparator4"
+		 />    
+	<View
+	     android:id="@+id/LinePersonalInfo01"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LinePersonalInfo0"
+		 />  	    
+    
+    <TextView
+        android:id="@+id/lblPersonalInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_Personal_Info"
+        android:textSize="18sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/LinePersonalInfo01"
+		android:gravity="center_horizontal"
+	  	android:background="#FF9933"        
+         />
+	<View
+	     android:id="@+id/LinePersonalInfo"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/lblPersonalInfo"
+		 />    
+	<View
+	     android:id="@+id/LinePersonalInfo1"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LinePersonalInfo"
+		 />  	 
+    
+    <TextView
+        android:id="@+id/lblFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_First_Name"
+        android:textSize="16sp" 
+        android:layout_below="@+id/LinePersonalInfo1"/>
+
+   <EditText
+        android:id="@+id/txtFirstName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:maxLength="100" 
+        android:layout_below="@+id/lblFirstName"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"
+        />
+
+    <TextView
+        android:id="@+id/lblFatherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_Father_Name"
+        android:textSize="16sp" 
+        android:layout_below="@+id/txtFirstName"/>
+        
+    <EditText
+        android:id="@+id/txtFatherName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"        
+        android:maxLength="100" 
+        android:layout_below="@+id/lblFatherName" 
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        />
+
+    <TextView
+        android:id="@+id/lblLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_Last_Name"
+        android:textSize="16sp" 
+        android:layout_below="@+id/txtFatherName"/>
+    
+    <EditText
+        android:id="@+id/txtLastName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"        
+        android:maxLength="100" 
+        android:layout_below="@+id/lblLastName" 
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        />
+ 
+    <TextView
+        android:id="@+id/lblGender"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_Gender"
+        android:textSize="16sp" 
+        android:layout_below="@+id/txtLastName" />
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblGender"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+		 />    
+        
+    <Button
+        android:id="@+id/btnBirthDatePick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showDatePickerDialog"
+        android:text="@string/str_Birth_Date"
+        android:textSize="12sp" 
+        android:layout_below="@+id/spinnerGender"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_button" 
+        />
+    
+    <TextView
+        android:id="@+id/lblBirthDateValue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBaseline="@+id/btnBirthDatePick"
+        android:layout_alignBottom="@+id/btnBirthDatePick"
+        android:layout_toRightOf="@+id/btnBirthDatePick"
+        android:gravity="center"
+        android:text="@string/strEmpty"
+        android:freezesText="true"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/lblEmail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/str_Email"
+        android:textSize="16sp" 
+        android:layout_below="@+id/btnBirthDatePick"/>
+    
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:maxLength="100" 
+        android:layout_below="@+id/lblEmail"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        />
+
+    <TextView
+        android:id="@+id/lblEducation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_Education"
+        android:textSize="16sp" 
+        android:layout_below="@+id/txtEmail"/>
+    
+    <Spinner
+        android:id="@+id/spinnerEducation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/lblEducation"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        />
+
+    <Button
+        android:id="@+id/btnCapture1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="CapturePersonalPhoto"
+        android:text="@string/str_Capture1"
+        android:textSize="12sp" 
+        android:layout_below="@+id/spinnerEducation"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_button" 
+        />
+
+
+	<ImageView
+        android:id="@+id/camera_personal_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"   
+        android:contentDescription="@string/str_Capture1"
+        android:layout_below="@+id/btnCapture1"/>
+	<Button
+		android:id="@+id/btnEmpreinte"
+		android:layout_width="150dp"
+		android:layout_height="wrap_content"
+		android:onClick="CapturePersonalEmpreinte"
+		android:text="@string/take_finger"
+		android:textSize="12sp"
+		android:layout_below="@+id/camera_personal_image"
+		android:layout_marginTop="15dp"
+		android:background="@drawable/rounded_button"
+		/>
+	<ImageView
+		android:id="@+id/fingerimage"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:adjustViewBounds="true"
+		android:contentDescription="Prendre empreinte"
+		android:layout_below="@+id/btnEmpreinte"/>
+
+    <TextView
+        android:id="@+id/lblEmptySeparator1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strEmpty"
+        android:textSize="18sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/fingerimage"
+         />	    
+    
+	<View
+	     android:id="@+id/LineNationalityInfo0"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/lblEmptySeparator1"
+		 /> 
+	
+	<View
+	     android:id="@+id/LineNationalityInfo01"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LineNationalityInfo0"
+		 /> 
+		 		 
+    <TextView
+        android:id="@+id/lblNationalityInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_Nationality"
+        android:textSize="18sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/LineNationalityInfo01"
+		android:gravity="center_horizontal"
+	  	android:background="#FF9933"         
+         />
+    
+	<View
+	     android:id="@+id/LineNationalityInfo"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/lblNationalityInfo"
+		 />    
+	<View
+	     android:id="@+id/LineNationalityInfo1"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LineNationalityInfo"
+		 />     
+    
+	<TextView
+        android:id="@+id/lblNationality"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_Nationality"
+		android:textSize="16sp" 
+        android:layout_below="@+id/LineNationalityInfo1"/>
+
+    <Spinner
+        android:id="@+id/spinnerNationality"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblNationality"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+		 />
+    
+    <TextView
+        android:id="@+id/lblIdType"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_IdType"
+        android:textSize="16sp" 
+        android:layout_below="@+id/spinnerNationality"/>
+   
+    <Spinner
+        android:id="@+id/spinnerIDType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/lblIdType"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        />
+    
+     <TextView
+        android:id="@+id/lblReferenceNbr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_ReferenceNbr"
+        android:textSize="16sp" 
+        android:layout_below="@+id/spinnerIDType"/>     
+    
+    <EditText
+        android:id="@+id/txtReferenceNbr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLength="100"  
+        android:layout_below="@+id/lblReferenceNbr"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        />    	    
+
+    <Button
+        android:id="@+id/btnCapture2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="CaptureCaptureIdCardSide1"
+        android:text="@string/str_Capture2"
+        android:textSize="12sp" 
+        android:layout_below="@+id/txtReferenceNbr"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_button" 
+        />    
+    
+    <ImageView 
+        android:id="@+id/camera_idcard1_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/str_Capture2"
+        android:freezesText="true"
+        android:layout_below="@+id/btnCapture2"/>    
+   
+    <Button
+        android:id="@+id/btnCapture3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="CaptureCaptureIdCardSide2"
+        android:text="@string/str_Capture3"
+        android:textSize="12sp" 
+        android:layout_below="@+id/camera_idcard1_image"
+        android:visibility="gone"
+        />    
+    
+    <ImageView 
+        android:id="@+id/camera_idcard2_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/str_Capture3"
+        android:freezesText="true"
+        android:layout_below="@+id/btnCapture3"/>       
+    
+    <TextView
+        android:id="@+id/lblEmptySeparator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strEmpty"
+        android:textSize="18sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/camera_idcard2_image"
+         />	    
+    
+	<View
+	     android:id="@+id/LineResidenceAddress0"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/lblEmptySeparator2"
+		 /> 
+	
+	<View
+	     android:id="@+id/LineResidenceAddress01"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LineResidenceAddress0"
+		 /> 
+		 		 
+    <TextView
+        android:id="@+id/lblResidenceAddressInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_ResidenceAddress"
+        android:textSize="18sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/LineResidenceAddress01"
+		android:gravity="center_horizontal"
+	  	android:background="#FF9933"        
+         />
+	<View
+	     android:id="@+id/LineResidenceAddress"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/lblResidenceAddressInfo"
+		 />    
+	<View
+	     android:id="@+id/LineResidenceAddress1"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LineResidenceAddress"
+		 />     
+    
+	<TextView
+        android:id="@+id/lblTown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_Town"
+		android:textSize="16sp" 
+        android:layout_below="@+id/LineResidenceAddress1"/>    
+    
+    <Spinner
+        android:id="@+id/spinnerTown"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/lblTown"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        />   
+    
+	<TextView
+        android:id="@+id/lblStreet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_Street"
+		android:textSize="16sp" 
+        android:layout_below="@+id/spinnerTown"/>    
+    
+    <EditText
+        android:id="@+id/txtStreet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:maxLength="100" 
+        android:layout_below="@+id/lblStreet"
+        android:padding="5dip"
+        android:background="@drawable/rounded_edittext"        
+        />     
+    
+    <TextView
+        android:id="@+id/lblEmptySeparator3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strEmpty"
+        android:textSize="18sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtStreet"
+        android:visibility="gone"
+         />	    
+    
+	<View
+	     android:id="@+id/LineOccupation0"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/lblEmptySeparator3"
+		 android:visibility="gone"
+		 /> 
+	
+	<View
+	     android:id="@+id/LineOccupation01"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LineOccupation0"
+		 android:visibility="gone"
+		 /> 
+		 		 
+    <TextView
+        android:id="@+id/lblOccupationInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_Occupation"
+        android:textSize="18sp"
+        android:textStyle="bold" 
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/LineOccupation01"
+        android:visibility="gone"
+         />
+	<View
+	     android:id="@+id/LineOccupation"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/lblOccupationInfo"
+		 android:visibility="gone"
+		 />    
+	<View
+	     android:id="@+id/LineOccupation1"
+		 android:layout_width="match_parent"
+		 android:layout_height="1dp"
+		 android:background="@android:color/black" 
+		 android:layout_below="@+id/LineOccupation"
+		 android:visibility="gone"
+		 />     
+    
+	<TextView
+        android:id="@+id/lblOccupationCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_OccupationCategory"
+		android:textSize="16sp" 
+        android:layout_below="@+id/LineOccupation1"
+        android:visibility="gone"
+        />  
+    
+    <Spinner
+        android:id="@+id/spinnerOccupationCategory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/lblOccupationCategory"
+        android:visibility="gone"        
+        />     
+    
+	<TextView
+        android:id="@+id/lblOccupationSubCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_OccupationSubCategory"
+		android:textSize="16sp" 
+        android:layout_below="@+id/spinnerOccupationCategory"
+        android:visibility="gone"
+        />  
+    
+    <Spinner
+        android:id="@+id/spinnerSubOccupationCategory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/lblOccupationSubCategory"
+        android:visibility="gone"
+        />     
+    
+	<TextView
+        android:id="@+id/lblEmployer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_Employer"
+		android:textSize="16sp" 
+        android:layout_below="@+id/spinnerSubOccupationCategory"
+        android:visibility="gone"
+        />    
+    
+    <EditText
+        android:id="@+id/txtEmployer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/str_Employer"
+        android:inputType="text"
+        android:maxLength="100"  
+        android:layout_below="@+id/lblEmployer"
+        android:visibility="gone"
+        />     
+    
+    <TextView
+        android:id="@+id/lblOccupationTown"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_Town"
+		android:textSize="16sp" 
+        android:layout_below="@+id/txtEmployer"
+        android:visibility="gone"
+        />    
+    
+    <Spinner
+        android:id="@+id/spinnerOccupationTown"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/lblOccupationTown"
+        android:visibility="gone"
+        />   
+    
+	<TextView
+        android:id="@+id/lblOccupationStreet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:text="@string/str_Street"
+		android:textSize="16sp" 
+        android:layout_below="@+id/spinnerOccupationTown"
+        android:visibility="gone"
+        />    
+    
+    <EditText
+        android:id="@+id/txtOccupationStreet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/str_Street"
+        android:inputType="text"
+        android:maxLength="100"  
+        android:layout_below="@+id/lblOccupationStreet"
+        android:visibility="gone"
+        />  
+    
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:onClick="onUploadClick"
+        android:text="@string/str_Save"
+        android:layout_below="@+id/txtOccupationStreet"
+        android:background="@drawable/rounded_button" 
+        />    
+    
+    <TextView
+        android:id="@+id/lblError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/strEmpty"
+        android:textSize="14sp"
+        android:textStyle="bold" 
+        android:layout_below="@+id/btnUpload"
+        android:textColor="@color/opaque_red"/>   
+
+
+    
+</RelativeLayout>
+
+</ScrollView>
+
