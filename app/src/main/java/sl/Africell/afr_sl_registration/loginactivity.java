@@ -23,11 +23,14 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.DownloadManager;
 import android.app.ProgressDialog;
+import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -41,16 +44,20 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.BaseColumns;
+import android.support.v4.BuildConfig;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 
+import android.support.v4.content.FileProvider;
 import android.telephony.TelephonyManager;
 import android.telephony.gsm.GsmCellLocation;
 import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,17 +65,20 @@ import android.widget.Toast;
 import java.io.IOException;
 
 
+import static android.support.v4.content.FileProvider.getUriForFile;
 import static sl.Africell.afr_sl_registration.apiUrl.baseUrl;
 
 public class loginactivity extends Activity {
     public static final String EXTRA_MESSAGE = "sl.Africell.afr_sl_registration.MESSAGE";
-    private String text;    
+    private String text;
     private ProgressDialog mProgressDialog;
     public static final int DIALOG_DOWNLOAD_PROGRESS = 0;
+    private Activity activity  ;
 	libClass libclass;
 	SessionManager session;
 	private static final int REQUEST_CODE = 101;
 	public static final int RequestPermissionCode = 1;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -77,6 +87,7 @@ public class loginactivity extends Activity {
 			setContentView(R.layout.activity_login);
 			session = new SessionManager(getApplicationContext());
 			PackageInfo pinfo;
+			activity = (Activity) getApplicationContext();
 			String _version = "";
 			try {
 				pinfo = getPackageManager().getPackageInfo(getPackageName(), 0);
@@ -226,7 +237,7 @@ public class loginactivity extends Activity {
     	Log.d("ANDRO_ASYNC", "Lenght of file: " + lenghtOfFile);
 
     	InputStream input = new BufferedInputStream(url.openStream());
-    	OutputStream output = new FileOutputStream(Environment.getExternalStorageDirectory() + "/download/AFR_ERP.apk");
+    	OutputStream output = new FileOutputStream(Environment.getExternalStorageDirectory()+ "/download/AFR_ERP.apk");
 
     	byte data[] = new byte[1024];
 
@@ -253,9 +264,9 @@ public class loginactivity extends Activity {
     	@SuppressWarnings("deprecation")
 		@Override
     	protected void onPostExecute(String unused) {
-    		dismissDialog(DIALOG_DOWNLOAD_PROGRESS);
-    		//UnInstallApp("sl.Africell.AFR_ERP");
-    		installApp();
+			dismissDialog(DIALOG_DOWNLOAD_PROGRESS);
+			//UnInstallApp("sl.Africell.afr_sl_registration");
+			installApp();
     	}
     }	
     
@@ -274,18 +285,43 @@ public class loginactivity extends Activity {
     } 
     
 	public void installApp(){
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/download/" + "AFR_ERP.apk")), "application/vnd.android.package-archive");
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(intent);
+		try{
+			Intent intent = new Intent(Intent.ACTION_VIEW);
+			intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory()+ "/Download/"  + "AFR_ERP.apk")), "application/vnd.android.package-archive");
+			intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(intent);
+//			//get destination to update file and set Uri
+//			//TODO: First I wanted to store my update .apk file on internal storage for my app but apparently android does not allow you to open and install
+//			//aplication with existing package from there. So for me, alternative solution is Download directory in external storage. If there is better
+//			//solution, please inform us in comment
+//			Context context = this;
+//			File filepath = new File(Environment.getExternalStorageDirectory(), "download/AFR");
+//			File newFile = new File(filepath, "AFR_ERP.apk");
+//			Uri contentUri = getUriForFile(context, "com.example.pmvungu.afr_erp.provider", newFile);
+//			Intent install = new Intent(Intent.ACTION_VIEW);
+//			install.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+////			install.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory()+ "/download/"  + "AFR_ERP.apk")),
+////					"application/vnd.android.package-archive");
+//						install.setDataAndType(contentUri,
+//					"application/vnd.android.package-archive");
+//			startActivity(install);
+//			finish();
+
+		}catch (Exception ex){
+			ex.printStackTrace();
+		}
 	}
 	public void UnInstallApp(String packageName)// Passing com.example.homelauncher as package name.
 	{
-		Uri packageURI = Uri.parse(packageName.toString());
-		Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageURI);
-		uninstallIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		startActivity(uninstallIntent); 
-	}	
+		try {
+			Uri packageURI = Uri.parse(packageName.toString());
+			Intent uninstallIntent = new Intent(Intent.ACTION_DELETE, packageURI);
+			uninstallIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+			startActivity(uninstallIntent);
+		}catch (Exception ex){
+			ex.printStackTrace();
+		}
+	}
 
 	/*check if device is connected to the Internet*/
 	private boolean isNetworkAvailable() {
@@ -476,7 +512,7 @@ public class loginactivity extends Activity {
 						text.setText(Html.fromHtml("	" +result[1]));
 						PackageInfo pinfo;
 						try {
-							openSecondActivity(result);
+							//openSecondActivity(result);
 							//Toast.makeText(getBaseContext(), result, Toast.LENGTH_LONG).show();
 
 							pinfo = getPackageManager().getPackageInfo(getPackageName(), 0);
